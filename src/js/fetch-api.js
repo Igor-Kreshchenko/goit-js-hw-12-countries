@@ -1,10 +1,11 @@
 import countryCardTpl from '../templates/country-card.hbs';
 import API from './fetchCountries';
 import getRefs from './get-refs';
+import debounce from 'lodash.debounce';
 
 const refs = getRefs();
 
-refs.searchInputRef.addEventListener('input', onSearch);
+refs.searchInputRef.addEventListener('input', debounce(onSearch, 500));
 
 function onSearch(event) {
   const inputValue = event.target.value;
