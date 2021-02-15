@@ -13,20 +13,18 @@ function onSearch(event) {
   const inputValue = event.target.value;
 
   if (inputValue !== '') {
-    API.fetchCountries(inputValue).then(result => {
-      if (result.length > 10) {
+    API.fetchCountries(inputValue).then(response => {
+      if (response.length > 10) {
         throwError(
           'Too many matches found. Please enter a more specific query!',
         );
-      } else if (result.length === 1) {
-        renderPage(result, countryCardTpl);
-      } else if (result.length >= 2 || result.length <= 10) {
-        renderPage(result, countriesListTpl);
-      } else if (result.status === 404) {
+      } else if (response.length === 1) {
+        renderPage(response, countryCardTpl);
+      } else if (response.length >= 2 || response.length <= 10) {
+        renderPage(response, countriesListTpl);
+      } else if (response.status === 404) {
         throwError('There is no such country. Try one more time');
       }
-
-      return result;
     });
   }
 

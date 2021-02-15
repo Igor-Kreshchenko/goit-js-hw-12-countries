@@ -14,11 +14,11 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   background-image: url('./images/bg-pattern.png');
-  padding: 50px;
+  padding: 25px 50px;
 }
 
 .search-input {
-  width: 100%;
+  width: 50%;
   height: 70px;
   margin-bottom: 50px;
   border: 2px solid grey;
@@ -63,13 +63,4 @@ body {
 .list-group-item {
   padding-left: 20px;
   font-size: 24px;
-}
-
-.pnotify {
-  display: flex;
-  justify-content: center;
-}
-
-.pnotify-container {
-  display: flex;
 }
