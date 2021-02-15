@@ -1,5 +1,5 @@
 import countryCardTpl from '../templates/country-card.hbs';
-import API from './api-service';
+import API from './fetchCountries';
 import getRefs from './get-refs';
 
 const refs = getRefs();
@@ -9,9 +9,7 @@ refs.searchInputRef.addEventListener('input', onSearch);
 function onSearch(event) {
   const inputValue = event.target.value;
 
-  API.fetchCountryByName(inputValue)
-    .then(renderCountryCard)
-    .catch(onFetchError);
+  API.fetchCountries(inputValue).then(renderCountryCard).catch(onFetchError);
 }
 
 function renderCountryCard(name) {
