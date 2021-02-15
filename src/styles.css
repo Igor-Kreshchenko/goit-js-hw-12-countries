@@ -45,3 +45,12 @@ body {
 .card-body {
   margin-right: auto;
 }
+
+.pnotify {
+  display: flex;
+  justify-content: center;
+}
+
+.pnotify-container {
+  display: flex;
+}
