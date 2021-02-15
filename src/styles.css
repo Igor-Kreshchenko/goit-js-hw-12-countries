@@ -19,7 +19,7 @@ body {
 
 .search-input {
   width: 100%;
-  height: 50px;
+  height: 70px;
   margin-bottom: 50px;
   border: 2px solid grey;
   border-radius: 10px;
@@ -44,6 +44,25 @@ body {
 
 .card-body {
   margin-right: auto;
+}
+
+.card-title {
+  padding: 0;
+  margin: 0;
+  font-size: 42px;
+}
+
+.card-text {
+  font-size: 24px;
+}
+
+.card-text-pre {
+  font-weight: 700;
+}
+
+.list-group-item {
+  padding-left: 20px;
+  font-size: 24px;
 }
 
 .pnotify {
