@@ -21,19 +21,19 @@ function onSearch(event) {
 }
 
 function checkPromise(response) {
-  if (response.length > 10) {
-    showNotification(
-      'Too many matches found. Please enter a more specific query!',
-    );
-  } else if (response.length === 1) {
+  if (response.length === 1) {
     renderPage(response, countryCardTpl);
   } else if (response.length >= 2 && response.length <= 10) {
     renderPage(response, countriesListTpl);
+  } else {
+    showNotification(
+      'Too many matches found. Please enter a more specific query!',
+    );
   }
 }
 
 function onError() {
-  showNotification('Unexpected error!');
+  showNotification('Wrong request! Please, try again');
 }
 
 function renderPage(country, templateFn) {
