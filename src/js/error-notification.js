@@ -2,7 +2,7 @@ import { error } from '@pnotify/core/dist/PNotify.js';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 
-function throwError(text) {
+function showNotification(text) {
   error({
     type: 'error',
     title: false,
@@ -14,4 +14,4 @@ function throwError(text) {
   });
 }
 
-export { throwError };
+export { showNotification };
