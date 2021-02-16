@@ -17,7 +17,6 @@ function onSearch(event) {
   }
 
   clearPage();
-  return;
 }
 
 function checkPromise(response) {
