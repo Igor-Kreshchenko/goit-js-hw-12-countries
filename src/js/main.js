@@ -19,11 +19,11 @@ function onSearch(event) {
   clearPage();
 }
 
-function checkPromise(response) {
-  if (response.length === 1) {
-    renderPage(response, countryCardTpl);
-  } else if (response.length >= 2 && response.length <= 10) {
-    renderPage(response, countriesListTpl);
+function checkPromise(data) {
+  if (data.length === 1) {
+    renderPage(data, countryCardTpl);
+  } else if (data.length >= 2 && data.length <= 10) {
+    renderPage(data, countriesListTpl);
   } else {
     showNotification(
       'Too many matches found. Please enter a more specific query!',
